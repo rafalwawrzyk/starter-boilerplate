@@ -28,7 +28,8 @@ gulp.task('reload',function(){
 gulp.task('serve', ['sass'], function(){
 
   browserSync({
-    server:config.src
+    server:config.src,
+    port:3020
   });
 
   gulp.watch([config.htmlIn, config.jsIn], ['reload']);
